@@ -66,15 +66,28 @@ d3.csv("assets/data/data.csv").then(function(demoData) {
         .enter()
         .append("circle")
         .attr("cx", d => xLinearScale(d.obesity))
-        .attr("cy", d => yLinearScale(d.income))
+        .attr("cy", d =>  yLinearScale(d.income))
         .attr("r", "15")
         .attr("fill", "blue")
+       
         .attr("opacity", ".5") 
-        .text(function(d){return d.abbr});
+        .text(function(d){return d.abbr})
+        
 
-    // circlesGroup.append("text")
-    //     .text(function(d){return d.abbr})
-    //     .color("white");
+        
+
+    var textCircle = chartGroup.selectAll('text')
+        .data(demoData)
+        .enter()
+        .append('text')
+        .text(function(d){return d.abbr})
+        .attr("x", d => xLinearScale(d.obesity - 0.22))
+        .attr("y", d => yLinearScale(d.income / 1.0190 )) 
+      
+
+        
+//you want your x and y of you text to be the same as you circles
+
 
 // Create axes labels
 

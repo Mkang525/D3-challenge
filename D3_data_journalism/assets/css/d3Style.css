@@ -24,13 +24,13 @@
 }
 
 /* font size dependent on radius, see app.js */
-.stateText {
+.text {
   font-family: sans-serif;
   fill: #fff;
   text-anchor: middle;
 }
 
-.stateCircle {
+.circle {
   fill: #89bdd3;
   stroke: #e3e3e3;
 }
