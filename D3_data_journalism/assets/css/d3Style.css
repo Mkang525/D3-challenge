@@ -24,14 +24,14 @@
 }
 
 /* font size dependent on radius, see app.js */
-.text {
+.stateText {
   font-family: sans-serif;
   fill: #fff;
   text-anchor: middle;
 }
 
 .circle {
-  fill: #89bdd3;
+  fill:  #89bdd3;
   stroke: #e3e3e3;
 }
 
@@ -51,6 +51,8 @@
   background: rgba(0, 0, 0, 0.8);
   border-radius: 4px;
 }
+
+
 
 /* Mobile Rules */
 @media screen and (max-width: 530px) {

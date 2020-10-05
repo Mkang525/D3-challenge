@@ -93,11 +93,11 @@ d3.csv("assets/data/data.csv").then(function(demoData) {
     .attr("x", 0 - (height / 2))
     .attr("dy", "1em")
     .attr("class", "axisText")
-    .text("Obesity (%)");
+    .text("Obesity");
 
     chartGroup.append("text")
     .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
     .attr("class", "axisText")
-    .text("Household Income (Median)");
+    .text("Median Income (Household)");
     
 });
