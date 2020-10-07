@@ -83,18 +83,16 @@ function updateToolTip(chosenXAxis, circlesGroup) {
 
     var toolTip = d3.tip()
         .attr("class", "d3-tip")
-        .offset([80, 60])
+        // .offset([80, 60])
         .html(function(d) {
             return (`<h6>${d.state}</h6><hr> ${label}${d[chosenXAxis]}%</strong>`);
         });
 
-    circlesGroup.call(toolTip);
+    // circlesGroup.call(toolTip);
+    svg.call(toolTip);
 
     circlesGroup.on("mouseover", function(data) {
         toolTip.style("display", "block");
-    //     toolTip.html(`${d.state}<br><hr> ${label}:${d[chosenXAxis]}%</strong>`)         
-    //         // .style("left", d3.event.pageX + "px")
-    //         // .style("top", d3.event.pageY + "px");
         toolTip.show(data);
         
     })
